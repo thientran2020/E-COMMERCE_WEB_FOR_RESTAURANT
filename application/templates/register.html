@@ -4,7 +4,40 @@
     <div class="login-form">
         <h2 class="text-center">{{ title|upper }}</h2>
         <div class = "row">
-            <p>Ready to Register....</p>
+            <form name="register" action="" method="post" novalidate>
+                {{ form.hidden_tag() }}
+                <p>
+                    {{ form.email.label }} <br>
+                    {{ form.email }} <br>
+                    {% for error in form.email.errors %}
+                            <span class="error-message">{{ error }}</span>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ form.password.label }} <br>
+                    {{ form.password }}
+                    {% for error in form.password.errors %} <br>
+                            <span class="error-message">{{ error }}</span>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ form.password_confirm.label }} <br>
+                    {{ form.password_confirm }}
+                    {% for error in form.password_confirm.errors %} <br>
+                            <span class="error-message">{{ error }}</span>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ form.username.label }} <br>
+                    {{ form.username(size=36) }}
+                    {% for error in form.username.errors %} <br>
+                            <span class="error-message">{{ error }}</span>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ form.submit() }}
+                </p>
+            </form>
         </div>
     </div>
 {% endblock %}
