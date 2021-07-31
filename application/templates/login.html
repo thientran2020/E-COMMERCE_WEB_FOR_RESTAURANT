@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="login-form">
+        <h2 class="text-center">{{ title|upper }}</h2>
+        <div class = "row">
+            <form name="login" action="" method="post" novalidate>
+                {{ form.hidden_tag() }}
+                <p>
+                    {{ form.email.label }} <br>
+                    {{ form.email(size=36) }} <br>
+                    {% for error in form.email.errors %}
+                            <span class="error-message">{{ error }}</span>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ form.password.label }} <br>
+                    {{ form.password(size=36) }}
+                    {% for error in form.password.errors %} <br>
+                            <span class="error-message">{{ error }}</span>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ form.submit() }}
+                </p>
+            </form>
+        </div>
+    </div>
+{% endblock %}

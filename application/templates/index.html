@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="wrap-content">
+        <h2 class="text-center">THIEN TRAN</h2>
+        <p>Electricity is basically the movement of electrons between atoms. Although both protons and electrons carry an electrical charge, atoms have no overall electrical charge. The important point is that electrons can be pushed out of their orbits when given some energy. Those shifting electrons create electricity.</p>
+        <p>Electricity is basically the movement of electrons between atoms. Although both protons and electrons carry an electrical charge, atoms have no overall electrical charge. The important point is that electrons can be pushed out of their orbits when given some energy. Those shifting electrons create electricity.</p>
+    </div>
+
+    <div class="wrap-content row text-center">
+        {% for item in data %}
+            <div class="col-md-6 menu-item">
+                <h3>{{ item.name }}</h3>
+                <img class="food-image" src="{{ item.image }}" alt="{{ item.name }}">
+                <p>{{ item.description }}</p>
+                <div class="item-info">
+                    <span>${{ item.price }}</span>
+                    <button id = "{{ item.id }} "class="cart-button">ADD TO CART</button>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="wrap-content" id="cart" hidden>
+        <h3 class="text-center">SHOPPING CART</h3>
+        <div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Price</th>
+                        <th scope="col"> </th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <h4 id="price"></h4>
+        <div class="text-center">
+            <button id="order" type="submit" class="order-button">ORDER</button>    
+        </div>
+    </div>    
+{% endblock %}

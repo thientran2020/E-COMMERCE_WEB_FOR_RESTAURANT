@@ -1,0 +1,8 @@
+[{"id":1, "name":"Thai Tea", "description":"Some descriptions go here", "image":"./static/images/img1.jpeg", "price": 5.99}, 
+ {"id":2, "name":"Veggie Noddle Soup", "description":"Some descriptions go here", "image":"./static/images/img4.jpeg", "price": 9.99},
+ {"id":3, "name":"Pan Fried Noodle with Beef", "description":"Some descriptions go here", "image":"./static/images/img2.jpeg", "price": 9.99},
+ {"id":4, "name":"Banh Uot", "description":"Some descriptions go here", "image":"./static/images/img5.jpeg", "price": 7.99},
+ {"id":5, "name":"Banh Cuon", "description":"Some descriptions go here", "image":"./static/images/img6.jpeg", "price": 7.99},
+ {"id":6, "name":"Fried Calamari", "description":"Some descriptions go here", "image":"./static/images/img3.jpeg", "price": 14.99},
+ {"id":7, "name":"Srping Rolls", "description":"Some descriptions go here", "image":"./static/images/img7.jpeg", "price": 12.99},
+ {"id":8, "name":"Tomato Noodle Soup", "description":"Some descriptions go here", "image":"./static/images/img8.jpeg", "price": 14.99}]

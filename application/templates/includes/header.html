@@ -1,0 +1,15 @@
+<header class="text-center top-container">
+    <div class="col-md-3">
+        <img class="logo" src="{{ url_for('static', filename = 'images/logo.png') }}">
+    </div>
+    <div class="col-md-9 site-header">
+        <h1 class="title">Welcome to <span class="title-box">Vietnamese</span> Food's World</h1>
+        <ul class="nav">
+            <li class="nav-item"><a href="{{ url_for('index') }}">Menu</a></li>
+            <li class="nav-item"><a href="{{ url_for('order') }}">Online Ordering</a></li>
+            <!-- <li class="nav-item"><a href="{{ url_for('menu') }}">About Us</a></li> -->
+            <li class="nav-item"><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li class="nav-item"><a href="{{ url_for('login') }}">Sign In</a></li>
+        </ul>
+    </div>
+</header>

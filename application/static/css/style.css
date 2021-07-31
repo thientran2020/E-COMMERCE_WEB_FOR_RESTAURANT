@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+}
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+html, 
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    background-image: url("../images/background-img.jpg");
+    background-size: cover;
+
+}
+.wrap-content {
+    width: 80%;
+    height: auto;
+    background: white;
+    padding: 2rem;
+    margin: 5% auto;
+}
+
+
+/******* HEADER
+************************/
+.top-container {
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    border-bottom: 3px solid yellow;
+    display: flex;
+    justify-content: space-around;
+}
+.logo {
+    width: auto;
+    height: auto;
+    max-width: 300px;
+}
+.title {
+    color: yellow;
+    font-style: italic;
+    padding: 20px;
+}
+.title-box {
+    background: white;
+    color: black;
+    font-style: normal;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.site-header {
+    padding: 20px;
+    margin: 3% auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+}
+.nav-item {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+.nav-item a {
+    padding: 8px 14px;
+    background: rgba(0, 110, 255);
+    color: white;
+    text-decoration: none;
+}
+.nav-item a:hover{
+    background: white;
+    color: rgba(0, 110, 255);
+    text-decoration: underline;
+}
+.nav .active {
+    color: yellow;
+    font-weight: bold;
+}
+
+/******* MAIN CONTENT
+************************/
+.login-form,
+.contact-form {
+    width: 60%;
+    height: 100%;
+    background-color: #faf7f7;
+    color: black;
+    margin: 5% auto;
+    padding: 5% 10%;
+    font-size: 18px;
+}
+.login-form input[type=submit] {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    margin-top: 5%;
+}
+.login-form input[type=submit]:hover {
+    color: yellow;
+}
+input[type=text], input[type=password] {
+    width: 50%;
+    padding: 7px;
+    margin: 20px 0;
+    display: inline-block;
+    border: none;
+    background: rgb(200, 231, 241);
+}
+input[type=text]:focus, input[type=password]:focus {
+    background-color: lightgray;
+    outline: none;
+}
+input[typt=submit] {
+    background: black;
+    color: white;
+}
+.error-message {
+    color :red;
+}
+
+/******* MENU CONTENT
+************************/
+.food-image {
+    width: auto;
+    height: 260px;
+    border: 1px solid black;
+    padding: 2px;
+    margin: 10px;
+}
+.menu-item {
+    margin: 0;
+    padding: 10px;
+    border: 1px solid darkorange;
+}
+.menu-item item-left {
+    margin-right: 5px;
+}
+.cart-button {
+    background-color: darkorange;
+    color: white;
+    border: none;
+    margin: 10px 20px;
+    padding: 5px;
+    display: inline-block;
+}
+.item-info {
+    text-align: right;
+}
+
+/******* SHOPPING CART
+************************/
+.remove-button {
+    background-color:black;
+    color: white;
+    border: none;
+    display: inline-block;
+}
+#price {
+    color: red;
+    text-align: right;
+    margin-right: 3% 8%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;   
+}
+.order-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    font-size: 30px;
+    margin: 20px 0 10px;
+}
+
+/******* FOOTER
+************************/
+.bottom-container {
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    width: 100%;
+    margin-top: 5%;
+    border-top: 3px solid yellow;
+    position: relative;
+    bottom: 0;
+}
