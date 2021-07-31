@@ -79,6 +79,13 @@ body {
     color: yellow;
     font-weight: bold;
 }
+.user {
+    color: white;
+    text-align: right;
+    margin: 3% 0 0;
+    padding-right: 20px;
+    font-size: 18px;
+}
 
 /******* MAIN CONTENT
 ************************/
@@ -120,6 +127,13 @@ input[typt=submit] {
 }
 .error-message {
     color :red;
+}
+.register-link {
+    color: blue;
+    font-style:italic;
+}
+.register-link:hover {
+    color: red;
 }
 
 /******* MENU CONTENT

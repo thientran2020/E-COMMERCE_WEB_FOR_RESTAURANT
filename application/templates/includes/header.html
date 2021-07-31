@@ -9,7 +9,15 @@
             <li class="nav-item"><a href="{{ url_for('order') }}">Online Ordering</a></li>
             <!-- <li class="nav-item"><a href="{{ url_for('menu') }}">About Us</a></li> -->
             <li class="nav-item"><a href="{{ url_for('contact') }}">Contact</a></li>
-            <li class="nav-item"><a href="{{ url_for('login') }}">Sign In</a></li>
+
+            {% if not session['username'] %}
+                <li class="nav-item"><a href="{{ url_for('login') }}">Log In</a></li>
+            {% else %}
+                <li class="nav-item"><a href="{{ url_for('logout') }}">Log Out</a></li>
+            {% endif %}
         </ul>
+        {% if session['username'] %} 
+            <p class='user'>Welcome {{ session['username'] }} - Have a great day!</p>
+        {% endif %}
     </div>
 </header>

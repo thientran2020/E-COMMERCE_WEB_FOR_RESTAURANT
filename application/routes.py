@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect, json
+from flask import render_template, flash, redirect, session, json
 from application import app, db
 from application.forms import LoginForm
 from application.models import User
@@ -15,6 +15,9 @@ def index():
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
+    if session.get('username'):
+        return redirect("/index")
+
     form = LoginForm()
     if form.validate_on_submit():
         email       = form.email.data
@@ -23,10 +26,18 @@ def login():
         user        = User.objects(email=email).first()
         if user and user.password == password:
             flash(f"Welcome {user.username} to Our Restaurant !", "success")
+            session['user_id'] = user.user_id
+            session['username'] = user.username
             return redirect("/index")
         else:
             flash("Sorry...Please double check your email and password!", "danger")
     return render_template("login.html", title="Login", form=form)
+
+@app.route("/logout")
+def logout():
+    session['user_id'] = False
+    session.pop('username', None)
+    return redirect("/index")
 
 @app.route("/order", methods=['POST', 'GET'])
 def order():
